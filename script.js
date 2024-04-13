@@ -21,16 +21,49 @@ function Burger(ingredient, patty, sauce) {
 function add_burger(ingredient, patty, sauce, type) {
     const newBurger = new Burger(ingredient, patty, sauce);
 
-    if (type === 1) {
+    if (type) {
         custom_burgers.push(newBurger);
 
         return custom_burgers;
     }
 
-    if (type === 0) {
+    if (!type) {
         option_burgers.push(newBurger);
 
         return option_burgers;
+    }
+}
+
+function append_burger(ingredient, patty, sauce, type) {
+    if (type) {
+        const list_custom_burger = document.querySelector(".custom_burgers ul");
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <div class="card">
+                <p class="ingredient">ingredient: ${ingredient}</p>
+                <p class="patty">patty: ${patty}</p>
+                <p class="sauce">sauce: ${sauce}</p>
+            </div>
+        `;
+
+        list_custom_burger.appendChild(li);
+
+    }
+
+    if (!type) {
+        const list_option_burger = document.querySelector(".option_burgers ul");
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <div class="card">
+                <p class="ingredient">ingredient: ${ingredient}</p>
+                <p class="patty">patty: ${patty}</p>
+                <p class="sauce">sauce: ${sauce}</p>
+            </div>
+        `;
+
+        list_option_burger.appendChild(li);
     }
 }
 
@@ -63,6 +96,7 @@ custom_form.addEventListener("submit", (e) => {
     const sauce_value = document.querySelector("#sauce").value;
 
     add_burger(ingredient_value, patty_value, sauce_value, 1);
+    append_burger(ingredient_value, patty_value, sauce_value, 1);
 
     console.log("custom burger: ", custom_burgers);
 
@@ -78,6 +112,7 @@ option_form.addEventListener("submit", (e) => {
     const sauce_value = document.querySelector("#sauce-option").value;
 
     add_burger(ingredient_value, patty_value, sauce_value, 0);
+    append_burger(ingredient_value, patty_value, sauce_value, 0);
 
     console.log("option burger: ", option_burgers);
 
