@@ -13,15 +13,16 @@ const custom_burgers = [];
 const option_burgers = [];
 
 class Burger {
-    constructor(ingredient, patty, sauce) {
+    constructor(name, ingredient, patty, sauce) {
+        this.name = name;
         this.ingredient = ingredient;
         this.patty = patty;
         this.sauce = sauce;
     }
 }
 
-function add_burger(ingredient, patty, sauce, type) {
-    const newBurger = new Burger(ingredient, patty, sauce);
+function add_burger(name, ingredient, patty, sauce, type) {
+    const newBurger = new Burger(name, ingredient, patty, sauce);
 
     if (type) {
         custom_burgers.push(newBurger);
@@ -32,12 +33,13 @@ function add_burger(ingredient, patty, sauce, type) {
     return type ? custom_burgers : option_burgers;
 }
 
-function append_burger(ingredient, patty, sauce, type) {
+function append_burger(name, ingredient, patty, sauce, type) {
     const list_burger = document.querySelector(`.${type ? "custom" : "option"}_burgers ul`);
     const li = document.createElement("li");
 
     li.innerHTML = `
             <div class="card">
+                <p>${name}</p>
                 <p class="ingredient">ingredient: ${ingredient}</p>
                 <p class="patty">patty: ${patty}</p>
                 <p class="sauce">sauce: ${sauce}</p>
@@ -63,12 +65,13 @@ option_close_button.addEventListener("click", () => dialog_option.close());
 custom_form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const name_value = document.querySelector("#name").value;
     const ingredient_value = document.querySelector("#ingredient").value;
     const patty_value = document.querySelector("#patty").value;
     const sauce_value = document.querySelector("#sauce").value;
 
-    add_burger(ingredient_value, patty_value, sauce_value, true);
-    append_burger(ingredient_value, patty_value, sauce_value, true);
+    add_burger(name_value, ingredient_value, patty_value, sauce_value, true);
+    append_burger(name_value, ingredient_value, patty_value, sauce_value, true);
 
     console.log("custom burger: ", custom_burgers);
 
@@ -79,12 +82,13 @@ custom_form.addEventListener("submit", (e) => {
 option_form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const name_value = document.querySelector("#name-option").value;
     const ingredient_value = document.querySelector("#ingredient-option").value;
     const patty_value = document.querySelector("#patty-option").value;
     const sauce_value = document.querySelector("#sauce-option").value;
 
-    add_burger(ingredient_value, patty_value, sauce_value, false);
-    append_burger(ingredient_value, patty_value, sauce_value, false);
+    add_burger(name_value, ingredient_value, patty_value, sauce_value, false);
+    append_burger(name_value, ingredient_value, patty_value, sauce_value, false);
 
     console.log("option burger: ", option_burgers);
 
