@@ -64,4 +64,13 @@ custom_form.addEventListener("submit", (e) => {
 option_form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const ingredient_value = ingredient.value;
+    const patty_value = patty.value;
+    const sauce_value = sauce.value;
+
+    add_burger(ingredient_value, patty_value, sauce_value);
+
+    console.log("burger: ", burgers);
+
+    dialog_custom.close();
 });
