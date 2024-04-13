@@ -21,13 +21,13 @@ function Burger(ingredient, patty, sauce) {
 function add_burger(ingredient, patty, sauce, type) {
     const newBurger = new Burger(ingredient, patty, sauce);
 
-    if (type) {
+    if (type === 1) {
         custom_burgers.push(newBurger);
 
         return custom_burgers;
     }
 
-    if (!type) {
+    if (type === 0) {
         option_burgers.push(newBurger);
 
         return option_burgers;
@@ -58,9 +58,9 @@ option_close_button.addEventListener("click", () => {
 custom_form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const ingredient_value = ingredient.value;
-    const patty_value = patty.value;
-    const sauce_value = sauce.value;
+    const ingredient_value = document.querySelector("#ingredient").value;
+    const patty_value = document.querySelector("#patty").value;
+    const sauce_value = document.querySelector("#sauce").value;
 
     add_burger(ingredient_value, patty_value, sauce_value, 1);
 
@@ -73,9 +73,9 @@ custom_form.addEventListener("submit", (e) => {
 option_form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const ingredient_value = ingredient.value;
-    const patty_value = patty.value;
-    const sauce_value = sauce.value;
+    const ingredient_value = document.querySelector("#ingredient-option").value;
+    const patty_value = document.querySelector("#patty-option").value;
+    const sauce_value = document.querySelector("#sauce-option").value;
 
     add_burger(ingredient_value, patty_value, sauce_value, 0);
 
