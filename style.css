@@ -20,6 +20,8 @@ body {
     grid-template-rows: 0.1fr auto;
 
     background-color: var(--primary-bg);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav {
@@ -92,8 +94,18 @@ body {
 
     background-color: var(--btn-primary);
     color: white;
+
+    font-size: 14px;
 }
 
 .btn:hover {
     background-color: var(--btn-hover);
+}
+
+.custom_burgers p,
+.option_burgers p {
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 600;
 }
