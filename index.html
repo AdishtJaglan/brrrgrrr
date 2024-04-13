@@ -16,22 +16,37 @@
     </div>
 
     <div class="right_side">
-        <button class="btn btn-show">create custom burger</button>
+        <button class="btn btn-show-custom">create custom burger</button>
+        <button class="btn btn-show-option">create from options</button>
+
+        <dialog class="dialog-option">
+            <div class="container-option">
+                <form action="" method="dialog" class="option-form">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+
+                    <button type="submit" class="btn-option">add burger</button>
+                </form>
+
+                <button class="btn-close-option" autofocus>close</button>
+            </div>
+        </dialog>
 
 
-        <dialog>
-            <div class="container">
-                <form action="" method="dialog">
+        <dialog class="dialog-custom">
+            <div class="container-custom">
+                <form action="" method="dialog" class="custom-form">
                     <input type="text" name="ingredient" id="ingredient" placeholder="ingredient" required>
 
                     <input type="text" name="patty" id="patty" placeholder="patty" required>
 
                     <input type="text" name="sauce" id="sauce" placeholder="sauce" required>
 
-                    <button type="submit">add burger</button>
+                    <button type="submit" class="btn-custom">add burger</button>
                 </form>
 
-                <button class="btn-close" autofocus>close</button>
+                <button class="btn-close-custom" autofocus>close</button>
             </div>
         </dialog>
     </div>
