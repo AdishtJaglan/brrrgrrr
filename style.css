@@ -1,9 +1,9 @@
 :root {
-    --primary-bg: #e76f51;
-    --secondary-bg: #e9c46a;
+    --primary-bg: #219ebc;
+    --secondary-bg: #8ecae6;
     --tertiary-bg: #264653;
-    --btn-primary: #ee9b00;
-    --btn-hover: #f48c06;
+    --btn-primary: #0096c7;
+    --btn-hover: #023e8a;
 }
 
 body {
@@ -108,4 +108,50 @@ body {
 
     font-size: 16px;
     font-weight: 600;
+}
+
+dialog {
+    width: 250px;
+    height: 325px;
+
+    border-radius: 25px;
+    border: none;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+.container-option,
+.container-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.container-option form,
+.container-custom form {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input,
+select {
+    width: 100%;
+    height: 10%;
+
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+
+    background-color: #e5e5e5;
 }
