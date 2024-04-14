@@ -43,10 +43,26 @@ function append_burger(name, ingredient, patty, sauce, type) {
                 <p class="ingredient">ingredient: ${ingredient}</p>
                 <p class="patty">patty: ${patty}</p>
                 <p class="sauce">sauce: ${sauce}</p>
+                <button class="btn-remove">remove brrrgrrr</button>
             </div>
         `;
 
     list_burger.appendChild(li);
+
+    // Add event listener for remove button
+    const removeButton = li.querySelector(".btn-remove");
+    removeButton.addEventListener("click", () => {
+        list_burger.removeChild(li); 
+        if (type) {
+            // Remove the burger from custom_burgers array
+            const index = custom_burgers.findIndex(burger => burger.name === name);
+            if (index !== -1) custom_burgers.splice(index, 1);
+        } else {
+            // Remove the burger from option_burgers array
+            const index = option_burgers.findIndex(burger => burger.name === name);
+            if (index !== -1) option_burgers.splice(index, 1);
+        }
+    });
 }
 
 //opening the custom modal
