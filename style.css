@@ -82,7 +82,12 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 200px;
+    height: 300px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .btn {
@@ -178,4 +183,52 @@ select {
 .btn-close-option:hover,
 .btn-close-custom:hover {
     background-color: var(--btn-hover);
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+
+    background-color: white;
+    color: var(--tertiary-bg);
+    border-radius: 15px;
+    border-left: 10px solid var(--tertiary-bg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 15px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card p:nth-child(1) {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding: 8px;
+
+    border-bottom: 1px solid lightgrey;
+    width: 60%;
+}
+
+.card p:nth-child(2),
+.card p:nth-child(3),
+.card p:nth-child(4) {
+    margin-top: 12px;
+
+    font-size: 16px;
+    font-weight: lighter;
+
+    border-bottom: 1px solid lightgrey;
+}
+
+.custom_burgers p,
+.option_burgers p {
+    font-size: 32px;
+    font-weight: 700;
 }
