@@ -116,6 +116,8 @@ dialog {
 
     border-radius: 25px;
     border: none;
+
+    background-color: var(--secondary-bg);
 }
 
 dialog::backdrop {
@@ -152,6 +154,28 @@ select {
     border-radius: 15px;
     border: none;
     text-align: center;
+    outline: none;
 
     background-color: #e5e5e5;
+}
+
+.btn-option,
+.btn-custom,
+.btn-close-option,
+.btn-close-custom {
+    width: 75%;
+    height: 10%;
+
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    background-color: var(--btn-primary);
+}
+
+.btn-custom:hover,
+.btn-option:hover,
+.btn-close-option:hover,
+.btn-close-custom:hover {
+    background-color: var(--btn-hover);
 }
