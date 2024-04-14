@@ -52,7 +52,7 @@ function append_burger(name, ingredient, patty, sauce, type) {
     // Add event listener for remove button
     const removeButton = li.querySelector(".btn-remove");
     removeButton.addEventListener("click", () => {
-        list_burger.removeChild(li); 
+        list_burger.removeChild(li);
         if (type) {
             // Remove the burger from custom_burgers array
             const index = custom_burgers.findIndex(burger => burger.name === name);
@@ -89,8 +89,10 @@ custom_form.addEventListener("submit", (e) => {
     add_burger(name_value, ingredient_value, patty_value, sauce_value, true);
     append_burger(name_value, ingredient_value, patty_value, sauce_value, true);
 
+
     console.log("custom burger: ", custom_burgers);
 
+    custom_form.reset();
     dialog_custom.close();
 });
 
@@ -108,5 +110,6 @@ option_form.addEventListener("submit", (e) => {
 
     console.log("option burger: ", option_burgers);
 
+    option_form.reset();
     dialog_option.close();
 });
