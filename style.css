@@ -232,3 +232,19 @@ select {
     font-size: 32px;
     font-weight: 700;
 }
+
+.btn-remove {
+    width: 60%;
+    height: 25%;
+
+    margin: 12px;
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    background-color: var(--btn-primary);
+}
+
+.btn-remove:hover{
+    background-color: var(--btn-hover);
+}
