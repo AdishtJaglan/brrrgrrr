@@ -101,6 +101,11 @@ body {
     color: white;
 
     font-size: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 .btn:hover {
@@ -176,6 +181,10 @@ select {
 
     color: white;
     background-color: var(--btn-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 .btn-custom:hover,
@@ -186,8 +195,8 @@ select {
 }
 
 .card {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 
     background-color: white;
     color: var(--tertiary-bg);
@@ -235,7 +244,7 @@ select {
 
 .btn-remove {
     width: 60%;
-    height: 25%;
+    height: 20%;
 
     margin: 12px;
     border: none;
@@ -243,8 +252,23 @@ select {
 
     color: white;
     background-color: var(--btn-primary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
-.btn-remove:hover{
+.btn-remove:hover {
     background-color: var(--btn-hover);
+}
+
+.btn-remove img {
+    width: 20%;
+    height: auto;
+}
+
+img {
+    width: 10%;
+    height: auto;
 }
