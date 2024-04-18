@@ -43,7 +43,7 @@ function append_burger(name, ingredient, patty, sauce, type) {
                 <p class="ingredient">ingredient: ${ingredient}</p>
                 <p class="patty">patty: ${patty}</p>
                 <p class="sauce">sauce: ${sauce}</p>
-                <button class="btn-remove">remove brrrgrrr <img src="./icons/hamburger-minus.svg"></button>
+                <button class="btn btn-remove">remove brrrgrrr <img src="./icons/hamburger-minus.svg"></button>
             </div>
         `;
 

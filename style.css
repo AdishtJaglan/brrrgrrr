@@ -1,9 +1,11 @@
 :root {
-    --primary-bg: #219ebc;
-    --secondary-bg: #8ecae6;
-    --tertiary-bg: #264653;
-    --btn-primary: #0096c7;
-    --btn-hover: #023e8a;
+    --primary-bg: #ffbe0b;
+    --secondary-bg: #bc6c25;
+    --tertiary-bg: #fb5607;
+    --btn-primary: #dda15e;
+    --btn-hover: #f77f00;
+    --font-custom: "Honk", system-ui;
+    --font-2: "Orbitron", sans-serif;
 }
 
 body {
@@ -21,7 +23,7 @@ body {
 
     background-color: var(--primary-bg);
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-custom);
 }
 
 .nav {
@@ -31,7 +33,7 @@ body {
     height: 12vh;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
     font-size: 24px;
@@ -42,7 +44,21 @@ body {
 
 .nav p {
     margin: 0;
-    margin-left: 24px;
+    margin-left: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3%;
+}
+
+.nav p:nth-child(2) {
+    margin-right: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3%;
 }
 
 .left_side {
@@ -64,6 +80,7 @@ body {
 
 .custom_burgers {
     grid-row: 1/2;
+    border-bottom: 1px solid var(--tertiary-bg);
 
 }
 
@@ -101,6 +118,7 @@ body {
     color: white;
 
     font-size: 14px;
+    font-family: var(--font-2);
 
     display: flex;
     justify-content: center;
@@ -118,6 +136,7 @@ body {
 
     font-size: 16px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 dialog {
@@ -167,6 +186,7 @@ select {
     outline: none;
 
     background-color: #e5e5e5;
+    font-family: var(--font-2);
 }
 
 .btn-option,
@@ -185,6 +205,8 @@ select {
     justify-content: center;
     align-items: center;
     gap: 4px;
+
+    font-family: var(--font-2);
 }
 
 .btn-custom:hover,
@@ -232,6 +254,7 @@ select {
 
     font-size: 16px;
     font-weight: lighter;
+    font-family: var(--font-2);
 
     border-bottom: 1px solid lightgrey;
 }
@@ -271,4 +294,15 @@ select {
 img {
     width: 10%;
     height: auto;
+}
+
+.main-icon {
+    height: 100%;
+}
+
+.account-icon {
+    border-radius: 50%;
+    background-color: var(--primary-bg);
+
+    height: 100%;
 }
